@@ -522,7 +522,7 @@ var Languages = {
 };
 
 if (Languages.lang[userLang] == undefined)
-	userLang = "en";
+	userLang = "cn";
 
 var option = {
 	displayhps:true,
