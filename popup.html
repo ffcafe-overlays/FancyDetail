@@ -7,9 +7,6 @@
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<link rel="shortcut icon" href="./favicon.ico">
-		<link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 		<link href="css/setting.css" rel="stylesheet" />
 		<link href="css/colorEditor.css" rel="stylesheet" />
 		<!-- version 0.4.1 -->
@@ -1003,9 +1000,9 @@
 				x = 150;
 
 			if(columnarray.indexOf(dps[i]) > -1)
-				$("#sortable-dps").append("<li dat=\"" + dps[i] + "\" data-view=\"true\">" + dps[i] + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
+				$("#sortable-dps").append("<li dat=\"" + dps[i] + "\" data-view=\"true\">" + (curLang.columns[dps[i]] || dps[i]) + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
 			else
-				$("#sortable-dps").append("<li dat=\"" + dps[i] + "\">" + dps[i] + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
+				$("#sortable-dps").append("<li dat=\"" + dps[i] + "\">" + (curLang.columns[dps[i]] || dps[i]) + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
 		}
 	}
 	else
@@ -1013,13 +1010,13 @@
 		for(var i in option.displayeddps)
 		{
 			if(option.displayeddps[i].view)
-				$("#sortable-dps").append("<li dat=\"" + option.displayeddps[i].name + "\" data-view=\"" + option.displayeddps[i].view + "\">" + option.displayeddps[i].name + "<input type='number' min='42' max='300' value='" + option.displayeddps[i].width + "' /></li>");
+				$("#sortable-dps").append("<li dat=\"" + option.displayeddps[i].name + "\" data-view=\"" + option.displayeddps[i].view + "\">" + (curLang.columns[option.displayeddps[i].name] || displayeddps[i].name) + "<input type='number' min='42' max='300' value='" + option.displayeddps[i].width + "' /></li>");
 		}
 
 		for(var i in option.displayeddps)
 		{
 			if(!option.displayeddps[i].view)
-				$("#sortable-dps").append("<li dat=\"" + option.displayeddps[i].name + "\" data-view=\"" + option.displayeddps[i].view + "\">" + option.displayeddps[i].name + "<input type='number' min='42' max='300' value='" + option.displayeddps[i].width + "' /></li>");
+				$("#sortable-dps").append("<li dat=\"" + option.displayeddps[i].name + "\" data-view=\"" + option.displayeddps[i].view + "\">" + (curLang.columns[option.displayeddps[i].name] || displayeddps[i].name)  + "<input type='number' min='42' max='300' value='" + option.displayeddps[i].width + "' /></li>");
 		}
 	}
 
@@ -1034,9 +1031,9 @@
 				x = 150;
 
 			if(columnarrayhps.indexOf(hps[i]) > -1)
-				$("#sortable-hps").append("<li dat=\"" + hps[i] + "\" data-view=\"true\">" + hps[i] + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
+				$("#sortable-hps").append("<li dat=\"" + hps[i] + "\" data-view=\"true\">" + (curLang.columns[hps[i]] || hps[i]) + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
 			else
-				$("#sortable-hps").append("<li dat=\"" + hps[i] + "\">" + hps[i] + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
+				$("#sortable-hps").append("<li dat=\"" + hps[i] + "\">" + (curLang.columns[hps[i]] || hps[i]) + "<input type='number' min='42' max='300' value='" + x + "' /></li>");
 		}
 	}
 	else
@@ -1044,13 +1041,13 @@
 		for(var i in option.displayedhps)
 		{
 			if(option.displayedhps[i].view)
-				$("#sortable-hps").append("<li dat=\"" + option.displayedhps[i].name + "\" data-view=\"" + option.displayedhps[i].view + "\">" + option.displayedhps[i].name + "<input type='number' min='42' max='300' value='" + option.displayedhps[i].width + "' /></li>");
+				$("#sortable-hps").append("<li dat=\"" + option.displayedhps[i].name + "\" data-view=\"" + option.displayedhps[i].view + "\">" + (curLang.columns[option.displayedhps[i].name] || displayedhps[i].name) + "<input type='number' min='42' max='300' value='" + option.displayedhps[i].width + "' /></li>");
 		}
 
 		for(var i in option.displayedhps)
 		{
 			if(!option.displayedhps[i].view)
-				$("#sortable-hps").append("<li dat=\"" + option.displayedhps[i].name + "\" data-view=\"" + option.displayedhps[i].view + "\">" + option.displayedhps[i].name + "<input type='number' min='42' max='300' value='" + option.displayedhps[i].width + "' /></li>");
+				$("#sortable-hps").append("<li dat=\"" + option.displayedhps[i].name + "\" data-view=\"" + option.displayedhps[i].view + "\">" + (curLang.columns[option.displayedhps[i].name] || displayedhps[i].name) + "<input type='number' min='42' max='300' value='" + option.displayedhps[i].width + "' /></li>");
 		}
 	}
 
